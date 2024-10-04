@@ -19,11 +19,11 @@ describe('Tests for Redmine website', () => {
         historyPage = new HistoryPage();
     });
 
-    it('Going to User self-registration support and check files', async () => {
+    it('Going to User self-registration support and check links', async () => {
         await userSelfRegistrationPage.open();
         await userSelfRegistrationPage.clickUserSelfRegistration();
-        await userSelfRegistrationPage.scrollToFiles();
-        await userSelfRegistrationPage.clickFiles();
+        await userSelfRegistrationPage.scrollToSettings();
+        await userSelfRegistrationPage.clickSetting();
     });
 
     it('Checking the number of projects in the Redmine section', async () => {
@@ -45,10 +45,10 @@ describe('Tests for Redmine website', () => {
         await userGuidePage.checkRegisterText();
     });
 
-    it('Checking history pages and text of them', async () => {
+    it('Checking privacy pages and text of them', async () => {
         await historyPage.open();
-        await historyPage.clickHistory();
+        await historyPage.clickPrivacy();
         await historyPage.checkCurrentUrl();
-        await historyPage.checkDateElements();
+        await historyPage.checkElements();
     });
 });

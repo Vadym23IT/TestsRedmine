@@ -5,24 +5,19 @@ class ProjectsPage {
     }
 
     async clickAllProjects() {
-        const redmine = await $('span=Redmine');
-        await redmine.click();
-        const allProjectsLink = await $('a=Все проекты');
-        await allProjectsLink.waitForClickable({ timeout: 5000 });
-        await allProjectsLink.click();
-        await browser.pause(2000);
+        let plugins = await $('a=Plugins');
+        await plugins.click();
     }
 
     async checkProjectExists(projectId) {
-        const links = await $$('a[href="/projects/redmine/issues?set_filter=1&status_id=%2A&tracker_id=1"]');
-        for (let link of links) {
-            const linkText = await link.getText();
-            if (linkText === projectId) {
-                console.log(`Text found: ${projectId}`);
-                await expect(linkText).toBe(projectId);
-                break; 
-            }
-        }
+        const pluginElement = await $('a=WBS (Work Breakdown Structure)_');
+        const isDisplayed = await pluginElement.isDisplayed();
+        await expect(isDisplayed).toBe(true);
+
+        const pluginElement2 = await $('a=Timesheet Essential By Redmine X');
+        await pluginElement2.scrollIntoView();
+        const isDisplayed2 = await pluginElement2.isDisplayed();
+        await expect(isDisplayed2).toBe(true);
     }
 }
 

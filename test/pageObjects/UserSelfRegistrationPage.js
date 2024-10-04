@@ -10,14 +10,14 @@ class UserSelfRegistrationPage {
       await browser.pause(2000);
     }
   
-    async scrollToFiles() {
-      let footer = await $('legend=Файлы (3)');
+    async scrollToSettings() {
+      let footer = await $('a=Self-registration setting');
       await footer.scrollIntoView();
       await browser.pause(2000);
     }
   
-    async clickFiles() {
-      let files = await $('legend=Файлы (3)');
+    async clickSetting() {
+      let files = await $('a=Redmine settings');
       await files.click();
       await browser.pause(2000);
     }
