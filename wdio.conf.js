@@ -50,9 +50,13 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        // capabilities for local browser web tests
-        browserName: 'microsoftedge' // or "firefox", "microsoftedge", "safari"
+        maxInstances: 1,
+        browserName: 'MicrosoftEdge',
+        'ms:edgeOptions': {
+            args: ['--headless', '--disable-gpu', '--window-size=1920,1080']
+        }
     }],
+    
 
     //
     // ===================
