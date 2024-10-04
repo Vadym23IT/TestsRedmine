@@ -50,7 +50,11 @@ export const config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'MicrosoftEdge'
+        maxInstances: 1,
+        browserName: 'MicrosoftEdge',
+        'ms:edgeOptions': {
+            args: ['--headless', '--disable-gpu']
+        }
     }],
     
 
