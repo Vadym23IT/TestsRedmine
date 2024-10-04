@@ -51,7 +51,10 @@ export const config = {
     //
     capabilities: [{
         maxInstances: 5,
-        browserName: 'MicrosoftEdge'
+        browserName: 'MicrosoftEdge',
+        'ms:edgeOptions': {
+            args: ['--headless', '--disable-gpu', '--window-size=1280,800', '--no-sandbox'],
+        },
     }],
     
 
