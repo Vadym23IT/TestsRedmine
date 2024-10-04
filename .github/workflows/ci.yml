@@ -17,5 +17,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Grant execute permissions for wdio
+        run: chmod +x ./node_modules/.bin/wdio
+
       - name: Run tests
         run: npm run wdio
