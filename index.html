@@ -1,13 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>Звіт про тести WebdriverIO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My GitHub Page!</h1>
-    <p>This is a sample page.</p>
+
+    <h1>Звіт про тести WebdriverIO</h1>
+    <h2>Результати тестування</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Тест</th>
+                <th>Результат</th>
+                <th>Коментарі</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Перехід до служби самостійної реєстрації</td>
+                <td>✅ Пройшов</td>
+                <td>Усі посилання працюють.</td>
+            </tr>
+            <tr>
+                <td>Перевірка кількості проектів в розділі Redmine</td>
+                <td>✅ Пройшов</td>
+                <td>Проект з ID 10114 існує.</td>
+            </tr>
+            <tr>
+                <td>Перевірка списків, які використовують Redmine</td>
+                <td>✅ Пройшов</td>
+                <td>Усі секції відображаються.</td>
+            </tr>
+            <tr>
+                <td>Перевірка облікових записів та тексту в "Реєстрація"</td>
+                <td>✅ Пройшов</td>
+                <td>Текст реєстрації відображається правильно.</td>
+            </tr>
+            <tr>
+                <td>Перевірка конфіденційних сторінок та їх тексту</td>
+                <td>✅ Пройшов</td>
+                <td>Усі елементи присутні.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>Дата тестування: <span id="test-date"></span></p>
+    </footer>
+
+    <script>
+        // Додаємо дату тестування
+        document.getElementById('test-date').textContent = new Date().toLocaleDateString();
+    </script>
 </body>
 </html>
