@@ -60,13 +60,7 @@ await historyPage.clickPrivacy();
 await historyPage.checkCurrentUrl();
 await historyPage.checkElements();
 
-Звіти
-Для генерації звітів використовується Allure Reporter. Щоб встановити Allure та згенерувати звіти, виконайте наступні кроки:
 
-Встановіть Allure:
-npm install -g allure-commandline --save-dev
-
-Після виконання тестів згенеруйте звіт:
 allure generate allure-results --clean
 
 Відкрийте звіт у браузері:
