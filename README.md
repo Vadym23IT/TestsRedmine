@@ -60,10 +60,8 @@ await historyPage.clickPrivacy();
 await historyPage.checkCurrentUrl();
 await historyPage.checkElements();
 
+Results:
+5 passing (48.8s)
 
-allure generate allure-results --clean
+Spec Files:	 1 passed, 1 total (100% completed) in 00:01:07  
 
-Відкрийте звіт у браузері:
-allure open
-
-Усі тести виконуються з конфігурацією WebdriverIO, яка знаходиться у файлі wdio.conf.js. Переконайтеся, що середовище правильно налаштоване для роботи з вашою системою.
